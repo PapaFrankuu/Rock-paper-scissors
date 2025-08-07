@@ -1,10 +1,8 @@
-const score = {
-  wins: 0,
-  losses: 0,
-  ties: 0
-};
-localStorage.removeItem("score");
-
+const score = JSON.parse(localStorage.getItem("score")) || {
+        wins: 0,
+        losses: 0,
+        ties: 0,
+      };
       updateScore();
       let computerMove = "";
       let result = "";
