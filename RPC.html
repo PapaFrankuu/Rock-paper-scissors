@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rishan's RPS</title>
+    <link rel="stylesheet" href="rpc.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="txt">Rock Paper Scissors</h1>
+
+      <div class="picks">
+        <button onclick="playGame('Rock')" class="circ-btn">
+          <img
+            src="https://img.icons8.com/?size=100&id=16486&format=png&color=000000"
+            class="icon rock"
+          />
+        </button>
+        <button onclick="playGame('Paper')" class="circ-btn">
+          <img
+            src="https://img.icons8.com/?size=100&id=2727&format=png&color=000000"
+            class="icon paper"
+          />
+        </button>
+        <button onclick="playGame('Scissors')" class="circ-btn">
+          <img
+            src="https://img.icons8.com/?size=100&id=44377&format=png&color=000000"
+            class="icon scissors"
+          />
+        </button>
+      </div>
+
+      <div class="results">
+        <p class="js-moves"></p>
+        <p class="js-result"></p>
+        <!-- Player name will show here -->
+        <p class="js-taunt"></p>
+        <p class="js-score"></p>
+      </div>
+      <div
+        class="gif-overlay"
+        style="display: none; text-align: center; margin: 15px 0"
+      >
+        <img
+          id="result-gif"
+          src=""
+          alt="result gif"
+          style="max-width: 200px; border-radius: 12px"
+        />
+      </div>
+
+      <button onclick="newGame()" class="reset-btn" style="display: none">
+        Resurrect
+      </button>
+    </div>
+
+    <script src="rpc.js"></script>
+
+    <script>
+      // Utility function to get URL param
+      function getQueryParam(param) {
+        const params = new URLSearchParams(window.location.search);
+        return params.get(param);
+      }
+
+      window.onload = () => {
+        const playerName = getQueryParam("player") || "Player";
+        const resultElem = document.querySelector(".js-result");
+        resultElem.textContent = `Welcome, ${playerName}! Ready to play?`;
+      };
+    </script>
+  </body>
+</html>

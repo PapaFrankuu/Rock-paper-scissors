@@ -1,0 +1,112 @@
+body {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.resetMess {
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+.resetMess.show {
+  opacity: 1;
+}
+js .js-result,
+.js-score,
+.js-taunt {
+  margin-top: -12px;
+}
+.circ-btn {
+  background-color: transparent;
+  border: white solid 4px;
+  gap: 10px;
+  padding: 20px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.icon {
+  filter: invert();
+  height: 50px;
+}
+.icon:hover {
+  transform: scale(1.2);
+  transition: 100ms ease-in-out;
+}
+.icon:active {
+  transform: scale(0.9);
+}
+.picks {
+  display: flex;
+  gap: 5px;
+}
+.reset-btn {
+  background-color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.icon.small {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+@media screen and (max-width: 400px) {
+  .container {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .txt {
+    font-size: 1.2rem;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon.small {
+    width: 20px;
+    height: 20px;
+  }
+
+  .results p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+  }
+
+  .reset-btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    margin-top: 10px;
+  }
+
+  .resetMess {
+    font-size: 0.8rem;
+    margin-top: 5px;
+  }
+  .circ-btn {
+    background-color: transparent;
+    border: white solid 4px;
+    gap: 5px;
+    padding: 10px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
