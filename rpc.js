@@ -16,7 +16,7 @@ let computerMove = "";
 let result = "";
 
 const tauntsComputerWins = [
-  "You suck, mama's boy!",
+  "You suck!",
   "Skill issue, lmao!",
   "Get good!",
   "Try harder next time!",
